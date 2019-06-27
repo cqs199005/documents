@@ -1,0 +1,61 @@
+git init 				初始化
+
+git add .                               添加所有文件监听
+git status                  		查看监听的文件
+git log  				提交日志
+git commit -m '第一次提交' 		提交本地仓库
+git remote add origin <url>     	添加github 远程仓库 origin(默认远程仓库名)
+
+
+git pull --rebase origin master	        合并github远程仓库
+git remote rm  origin                   移除github远程仓库
+git push -u origin master		提交 github 远程仓库 master主分支
+git push
+git pull                                拉取远程代码，使得本地代码保持最新
+git pull origin 分支名
+git branch				查看分支
+git branch gh-pages			添加 gh-pages 分支
+git checkout gh-pages			切换 gh-pages 分支
+git branch -d BranchName                远程删除git服务器上的分支
+git push -u origin gh-pages 		提交 github 远程仓库 gh-pages分支，仅第一次提交到远程需要-u
+----------------------------------------------------------------------------------------------------------------
+
+git add .
+git commit -m '我提交了'
+git checkout develop
+git pull origin develop
+git merge harry.huang
+git push origin develop
+git checkout harry.huang
+git pull origin develop
+git push origin develop
+------------------------------------------------------------------------------------------------------------------
+
+git status  告诉你有文件被修改过
+git diff    可以查看修改内容
+
+git reset --hard HEAD^ 回退到上一个版本
+git log     查看提交版本
+git reset --hard commit_id  回退到某个提交的版本
+
+git reflog  用来记录你的每一次命令
+git diff HEAD -- readme.txt  查看工作区和版本库里面最新版本的区别
+
+git checkout -- readme.txt   还未使用git add缓存代码  放弃某个文件修改
+git checkout .		     还未使用git add缓存代码  放弃全部文件修改
+git reset HEAD readme.txt    使用git add缓存代码  把暂存区的某个文件修改回退到工作区
+git reset HEAD .             使用git add缓存代码  把暂存区的所有文件修改回退到工作区
+
+git remote add origin git@github.com:michaelliao/learngit.git  本地仓库与远程仓库关联
+git push -u origin gh-pages    -u 会把本地的master分支和远程的master分支关联起来，之后不需要了
+
+git checkout -b dev     创建dev分支，然后切换到dev分支  -b参数表示创建并切换
+git branch dev          创建dev分支
+git checkout dev        切换到dev分支
+git branch              查看所有分支，当前分支前面会标一个*号
+git merge dev           合并dev分支到当前分支
+git branch -d dev       删除dev分支
+
+git fetch origin master:temp 这句命令的意思是：从远程的origin仓库的master分支下载到本地并新建一个分支temp
+
+每次修改，如果不用git add到暂存区，那就不会加入到commit中

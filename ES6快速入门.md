@@ -530,7 +530,6 @@ getFileByPath("./file/01.txt").then(function(data){
   console.log(Pre.info);  //aaaa
   ```
 
-  
 
 ### 11.for-of数组循环
 
@@ -544,5 +543,20 @@ for(let val of arr) {
 }
 //1 2 
 //val 代表数组的每一项,并且可以使用break打断
+```
+
+### 12. Array.some()方法
+
+some() 方法会依次执行数组的每个元素：
+
+- **如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测。**
+- **如果没有满足条件的元素，则返回false。**
+
+```javascript
+
+var ages = [23,44,3]
+if (ages.some(age => age < 10)) {
+	console.log('true')
+}
 ```
 
